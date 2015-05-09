@@ -84,6 +84,15 @@ bio.display = function() {
 		$('#skills').append(formattedSkill);
 	}
 	
+	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contact.mobile));
+
+	$("#footerContacts").append(HTMLemail.replace("%data%", bio.contact.email));
+
+	$("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contact.twitter));
+
+	$("#footerContacts").append(HTMLgithub.replace("%data%", bio.contact.github));
+
+	$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contact.location));
 }
 
 work.display = function() {
