@@ -30,7 +30,13 @@ var projects = {
 	{
 		"title": "Resume",
 		"dates": "2015",
-		"description": "Working on a resume",
+		"description": "Working on a resume.",
+		"images": ['images/197x148.gif']
+	},
+	{
+		"title": "Portfolio",
+		"dates": "2015",
+		"description": "Portfolio to show off my amazing work.",
 		"images": ['images/197x148.gif']
 	}
 	]
@@ -52,7 +58,14 @@ var education = {
 		"school": "Udacity",
 		"date": "2015",
 		"url": "www.udacity.com"
-	}]
+	},
+	{
+		"title": "Responsive Design",
+		"school": "Udacity",
+		"date": "2015",
+		"url": "www.udacity.com"
+	}
+	]
 };
 
 
