@@ -1,25 +1,32 @@
 var bio = {
 	"name": "Jeremy Shanks",
-	"role": "Web Developer",
+	"role": "Front-end Web Developer",
 	"contact": {
-		"mobile": "423-519-4379",
+		"mobile": "555-555-5555",
 		"email": "jshanks24@gmail.com",
 		"github": "jshanks24",
-		"twitter": "jshanks24",
-		"location": "Sweetwater, TN"
+		"twitter": "jeremy_shanks",
+		"location": "East TN"
 	},
-	"biopic": "images/fry.jpg",
+	"biopic": "images/Portfolio_Image_BW.jpg",
 	"welcomeMessage": "Welcome to my site",
-	"skills": ["HTML", "CSS", "Javascript"]
+	"skills": ["HTML", "CSS", "Javascript", "AngularJS", "KnockoutJS", "jQuery", "PHP", "Wordpress", "Bootstrap", "Sublime Text", "Mac OS X", "Linux"]
 };
 
 var work = {
 	"jobs": [
 	{
+		"employer": "Havco",
+		"title": "Dry Kiln Operator",
+		"location": "East TN",
+		"dates": "2015-present",
+		"description": "Control dry kilns to ensure lumber dries properly."
+	},
+	{
 		"employer": "Shanks Web Services",
 		"title": "Freelance Web Developer",
-		"location": "Sweetwater, TN",
-		"dates": "2013-present",
+		"location": "East TN",
+		"dates": "2014-2014",
 		"description": "Develop sites for local businesses."
 	}
 	]
@@ -28,19 +35,25 @@ var work = {
 var projects = {
 	"projects": [
 	{
-		"title": "Resume",
-		"dates": "2015",
-		"description": "Working on a resume.",
-		"images": ['images/197x148.gif']
+		"title": "The Linux Startup",
+		"dates": "2012-2014",
+		"description": "Created a website to help newcomers to linux. The Site was built using Wordpress.",
+		"images": ['images/thelinuxstartupsmall.jpg']
 	},
 	{
-		"title": "Portfolio",
+		"title": "Genesis Kickstart",
 		"dates": "2015",
-		"description": "Portfolio to show off my amazing work.",
+		"description": "Web application used to build Wordpress themes for the Genesis Framework.",
+		"images": ['images/genesiskickstart_tksmall.jpg']
+	},
+	{
+		"title": "Udacity Portfolio",
+		"dates": "2015",
+		"description": "Portfolio to show off my amazing work while working on the Udacity Front-end Nanodegree.",
 		"images": ['images/197x148.gif']
 	}
 	]
-}
+};
 
 var education = {
 	"schools": [
@@ -54,13 +67,7 @@ var education = {
 	}],
 	"onlineCourses": [
 	{
-		"title": "Intro to HTML and CSS",
-		"school": "Udacity",
-		"date": "2015",
-		"url": "www.udacity.com"
-	},
-	{
-		"title": "Responsive Design",
+		"title": "Front-end Web Developer Nanodegree",
 		"school": "Udacity",
 		"date": "2015",
 		"url": "www.udacity.com"
@@ -89,12 +96,15 @@ bio.display = function() {
 	if (bio.skills.length > 0) {
 		$('#header').append(HTMLskillsStart);
 
-		var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
-		$('#skills').append(formattedSkill);
-		formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
+		for (i = 0; i < bio.skills.length; i++) 
+		{
+			var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+			$('#skills').append(formattedSkill);
+		}
+/* 		formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
 		$('#skills').append(formattedSkill);
 		formattedSkill = HTMLskills.replace('%data%', bio.skills[2]);
-		$('#skills').append(formattedSkill);
+		$('#skills').append(formattedSkill); */
 	}
 	
 	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contact.mobile));
@@ -125,7 +135,7 @@ work.display = function() {
 		$(".work-entry:last").append(formattedDescription);
 
 	}
-}
+};
 
 projects.display = function() {
 	for (project in projects.projects) {
