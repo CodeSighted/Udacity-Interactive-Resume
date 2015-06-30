@@ -50,7 +50,7 @@ var projects = {
 		"title": "Udacity Portfolio",
 		"dates": "2015",
 		"description": "Portfolio to show off my amazing work while working on the Udacity Front-end Nanodegree.",
-		"images": ['images/197x148.gif']
+		"images": ['images/udacity-portfolio-site_small.jpg']
 	}
 	]
 };
